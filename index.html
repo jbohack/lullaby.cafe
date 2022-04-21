@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1 style="color:rgb(83, 83, 207);" onClick="playMusic()" id="hiddenMusic" >a deep dreamy atmosphere...
+        <audio
+        src="../assets/sound/bubblegum-lofi.mp3"
+        autoplay
+        loop></audio>
+    </h1>
+    <p class="footer-text"> made with <img class="emoji" alt="heart" height="20" width="20" src="../assets/img/2764.png"></g-emoji> by <a target="_blank" rel="noopener noreferrer" href="https://discordapp.com/users/184471481026084864/">emilia#0001</a></p>
+</body>
+
+<style>
+    @font-face {
+        font-family: tooCuteFont;
+        src: url(../assets/font/tfc-font.ttf);
+    }
+    @keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }   
+
+    @-moz-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+
+    @-webkit-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }   
+
+    @-o-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+
+    @-ms-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+    h1 {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        user-select: none;
+        font-family: tooCuteFont;
+        animation: fadeIn linear 2s;
+        -webkit-animation: fadeIn linear 2s;
+        -moz-animation: fadeIn linear 2s;
+        -o-animation: fadeIn linear 2s;
+        -ms-animation: fadeIn linear 2s;
+        transform: translate(-50%, -50%)
+    }
+    
+    .footer-text {
+        color:rgb(204, 107, 191);
+        margin: 0;
+        position: absolute;
+        top: 98%;
+        left: 50%;
+        margin-right: -50%;
+        user-select: none;
+        font-family: tooCuteFont;
+        animation: fadeIn linear 4;
+        -webkit-animation: fadeIn linear 4s;
+        -moz-animation: fadeIn linear 4s;
+        -o-animation: fadeIn linear 4s;
+        -ms-animation: fadeIn linear 4s;
+        transform: translate(-50%, -50%) 
+    }
+    .emoji{vertical-align: middle;}
+
+    a{
+        color:rgb(204, 107, 191);
+    }
+
+    body {
+        background:url('../assets/gif/landscape.gif') repeat-y 100% 100% fixed;
+        height:auto;
+        width:auto;
+    }
+</style>
+
+<script>
+    var music= document.getElementById("hiddenMusic").children[0];
+    var playingMusic = false;
+    music.pause();
+  
+    function playMusic() {
+      if (playingMusic) {
+        music.pause();
+      } else {
+        music.play();
+      }
+      playingMusic = !playingMusic;
+    }
+</script>
+</html>
