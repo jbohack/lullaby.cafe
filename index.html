@@ -8,23 +8,24 @@
     <h1 style="color:rgb(83, 83, 207);">lullaby.cafe</h1>
     <h2 style="color:rgb(83, 83, 207);" onClick="playMusic()" id="hiddenMusic" >a deep dreamy atmosphere...
         <audio
-        src="../assets/sound/bubblegum-lofi.mp3"
+        src="./assets/sound/bubblegum-lofi.mp3"
         autoplay
         loop></audio>
     </h2>
     
     <div class="box flex">
-            <img src="../assets/img/github.png" class="github" width="40" height="40" onClick="openGitHub()">
-            <img src="../assets/img/realmeye.png" class="realmeye" width="40" height="40" onClick="openRealmEye()">
+            <img src="./assets/img/github.png" class="github" width="40" height="40" onClick="openGitHub()">
+            <img src="./assets/img/realmeye.png" class="realmeye" width="40" height="40" onClick="openRealmEye()">
+            <img src="./assets/img/coffee.png" class="coffee" width="40" height="40" onClick="openCoffeeTip()">
     </div>
 
-    <p class="footer-text"> made with <img class="emoji" alt="heart" height="20" width="20" src="../assets/img/2764.png"></g-emoji> by <a class="footer-name" target="_blank" rel="noopener noreferrer" href="https://discordapp.com/users/184471481026084864/">emilia#0001</a></p>
+    <p class="footer-text"> made with <img class="emoji" alt="heart" height="20" width="20" src="./assets/img/2764.png"></g-emoji> by <a class="footer-name" target="_blank" rel="noopener noreferrer" href="https://discordapp.com/users/184471481026084864/">emilia#0001</a></p>
 </body>
 
 <style>
     @font-face {
         font-family: tooCuteFont;
-        src: url(../assets/font/tfc-font.ttf);
+        src: url(./assets/font/tfc-font.ttf);
     }
 
     @keyframes fadeIn {
@@ -154,7 +155,7 @@
     }
 
     body {
-        background:url('../assets/gif/landscape.gif') repeat-y 100% 100% fixed;
+        background:url('./assets/gif/landscape.gif') repeat-y 100% 100% fixed;
     }
     body::-webkit-scrollbar {
         display: none;
@@ -186,6 +187,9 @@
     }
     function openRealmEye() {
         window.open("https://realmeye.com/player/emi", "_blank");
+    }
+    function openCoffeeTip() {
+        window.open("https://ko-fi.com/R6R6C9X72", "_blank");
     }
 </script>
 </html>
