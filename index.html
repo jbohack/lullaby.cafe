@@ -12,6 +12,12 @@
         autoplay
         loop></audio>
     </h2>
+    
+    <div class="box flex">
+            <img src="github.png" class="github" width="40" height="40" onClick="openGitHub()">
+            <img src="realmeye.png" class="realmeye" width="40" height="40" onClick="openRealmEye()">
+    </div>
+
     <p class="footer-text"> made with <img class="emoji" alt="heart" height="20" width="20" src="../assets/img/2764.png"></g-emoji> by <a class="footer-name" target="_blank" rel="noopener noreferrer" href="https://discordapp.com/users/184471481026084864/">emilia#0001</a></p>
 </body>
 
@@ -20,6 +26,7 @@
         font-family: tooCuteFont;
         src: url(../assets/font/tfc-font.ttf);
     }
+
     @keyframes fadeIn {
         0% {opacity:0;}
         100% {opacity:1;}
@@ -44,6 +51,36 @@
         0% {opacity:0;}
         100% {opacity:1;}
     }
+
+    .box.flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 110vh;
+    }
+
+    .box {
+        padding: .5rem;
+        border-radius: 4px;
+    }
+
+    .box p {
+        max-width: 125px;
+        text-align: center;
+        margin: .25rem;
+        padding: .25rem;
+    }
+   
+    img {
+        animation: fadeIn linear 5s;
+        -webkit-animation: fadeIn linear 5s;
+        -moz-animation: fadeIn linear 5s;
+        -o-animation: fadeIn linear 5s;
+        -ms-animation: fadeIn linear 5s;
+        cursor: pointer;
+        margin: 0 20px;
+    }
+
     h1 {
         text-shadow: 1px 1px 2px black, 0 0 10px rgb(22, 22, 231), 0 0 3px rgb(7, 7, 170);
         font-size: 45px;
@@ -83,15 +120,15 @@
 
     h2:hover {
         text-decoration: underline;
-    }   
-     
+    }
+
     .footer-text {
         color:rgb(204, 107, 191);
-        margin: 0;
-        position: absolute;
-        top: 98%;
+        position: fixed;
         left: 50%;
-        margin-right: -50%;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
         user-select: none;
         font-family: tooCuteFont;
         animation: fadeIn linear 4;
@@ -101,6 +138,7 @@
         -ms-animation: fadeIn linear 4s;
         transform: translate(-50%, -50%) 
     }
+
     .emoji{
         vertical-align: middle;
     }
@@ -117,8 +155,13 @@
 
     body {
         background:url('../assets/gif/landscape.gif') repeat-y 100% 100% fixed;
-        height:auto;
-        width:auto;
+    }
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    
+    html {
+        scrollbar-width: none;
     }
 </style>
 
@@ -134,6 +177,15 @@
         music.play();
       }
       playingMusic = !playingMusic;
+    }
+</script>
+
+<script>
+    function openGitHub() {
+        window.open("https://github.com/jbohack", "_blank");
+    }
+    function openRealmEye() {
+        window.open("https://realmeye.com/player/emi", "_blank");
     }
 </script>
 </html>
