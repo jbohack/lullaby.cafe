@@ -1,0 +1,192 @@
+@font-face {
+    font-family: tooCuteFont;
+    src: url(../font/tfc-font.ttf);
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}   
+
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}   
+
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-webkit-keyframes cursor {
+    0% {cursor: url(../img/cursor/1/butterfly1.png), auto;}
+    10% {cursor: url(../img/cursor/1/butterfly2.png), auto;}
+    20% {cursor: url(../img/cursor/1/butterfly3.png), auto;}
+    30% {cursor: url(../img/cursor/1/butterfly4.png), auto;}
+    40% {cursor: url(../img/cursor/1/butterfly5.png), auto;}
+    50% {cursor: url(../img/cursor/1/butterfly6.png), auto;}
+    60% {cursor: url(../img/cursor/1/butterfly7.png), auto;}
+} 
+
+@keyframes cursor {
+    0% {cursor: url(../img/cursor/1/butterfly1.png), auto;}
+    10% {cursor: url(../img/cursor/1/butterfly2.png), auto;}
+    20% {cursor: url(../img/cursor/1/butterfly3.png), auto;}
+    30% {cursor: url(../img/cursor/1/butterfly4.png), auto;}
+    40% {cursor: url(../img/cursor/1/butterfly5.png), auto;}
+    50% {cursor: url(../img/cursor/1/butterfly6.png), auto;}
+    60% {cursor: url(../img/cursor/1/butterfly7.png), auto;}
+}
+
+.box.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+}
+
+.box {
+    padding: .5rem;
+    border-radius: 4px;
+}
+
+.box p {
+    max-width: 125px;
+    text-align: center;
+    margin: .25rem;
+    padding: .25rem;
+}
+
+.links {
+    animation: fadeIn linear 4s;
+    -webkit-animation: fadeIn linear 4s;
+    -moz-animation: fadeIn linear 4s;
+    -o-animation: fadeIn linear 4s;
+    -ms-animation: fadeIn linear 4s;
+    margin: 0 20px;
+    image-rendering: pixelated;
+}
+
+.links:hover{
+    filter: drop-shadow(0 0 10px rgb(20, 33, 206));
+}
+
+h1 {
+    text-shadow: 1px 1px 2px black, 0 0 10px rgb(22, 22, 231), 0 0 3px rgb(7, 7, 170);
+    font-size: 45px;
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-right: -50%;
+    user-select: none;
+    font-family: tooCuteFont;
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 2s;
+    -moz-animation: fadeIn linear 2s;
+    -o-animation: fadeIn linear 2s;
+    -ms-animation: fadeIn linear 2s;
+    transform: translate(-50%, -50%)
+}
+
+h2 {
+    text-shadow: 1px 1px 2px black, 0 0 5px rgb(22, 22, 231), 0 0 3px rgb(7, 7, 170);
+    font-size: 25px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    user-select: none;
+    font-family: tooCuteFont;
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 2s;
+    -moz-animation: fadeIn linear 2s;
+    -o-animation: fadeIn linear 2s;
+    -ms-animation: fadeIn linear 2s;
+    transform: translate(-50%, -50%)
+}
+
+h2:hover {
+    text-decoration: underline;
+}
+
+.footer-text {
+    color:rgb(204, 107, 191);
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    user-select: none;
+    font-family: tooCuteFont;
+    animation: fadeIn linear 6s;
+    -webkit-animation: fadeIn linear 6s;
+    -moz-animation: fadeIn linear 6s;
+    -o-animation: fadeIn linear 6s;
+    -ms-animation: fadeIn linear 6s;
+    transform: translate(-50%, -50%) 
+}
+
+.secret-text {
+    color:rgb(204, 107, 191);
+    position: fixed;
+    left: 50%;
+    bottom: -20px;
+    width: 100%;
+    text-align: center;
+    user-select: none;
+    font-family: tooCuteFont;
+    animation: fadeIn linear 3s;
+    -webkit-animation: fadeIn linear 3s;
+    -moz-animation: fadeIn linear 3s;
+    -o-animation: fadeIn linear 3s;
+    -ms-animation: fadeIn linear 3s;
+    transform: translate(-50%, -50%) 
+}
+
+.emoji{
+    image-rendering: pixelated;
+    vertical-align: middle;
+}
+
+.emoji:hover{
+    filter: blur(2px);
+}
+
+.footer-name {
+    text-shadow: 1px 1px 2px black, 0 0 5px rgb(160, 98, 211), 0 0 3px rgb(128, 91, 123);
+    color:rgb(204, 107, 191);
+    text-decoration: none;
+    cursor: url(../img/cursor/1/butterfly1.png), auto;
+    -webkit-animation: cursor 1500ms infinite;
+    animation: cursor 1500ms infinite;
+}
+
+.footer-name:hover {
+    text-decoration: underline;
+}
+
+body {
+    background:url('../gif/landscape.gif') repeat-y 100% 100% fixed;
+    cursor: url(../img/cursor/1/butterfly1.png), auto;
+    -webkit-animation: cursor 1500ms infinite;
+    animation: cursor 1500ms infinite;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scrollbar-width: none;
+}
