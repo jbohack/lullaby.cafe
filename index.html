@@ -53,6 +53,26 @@
         100% {opacity:1;}
     }
 
+    @-webkit-keyframes cursor {
+        0% {cursor: url(./assets/img/cursor/1/butterfly1.png), auto;}
+        10% {cursor: url(./assets/img/cursor/1/butterfly2.png), auto;}
+        20% {cursor: url(./assets/img/cursor/1/butterfly3.png), auto;}
+        30% {cursor: url(./assets/img/cursor/1/butterfly4.png), auto;}
+        40% {cursor: url(./assets/img/cursor/1/butterfly5.png), auto;}
+        50% {cursor: url(./assets/img/cursor/1/butterfly6.png), auto;}
+        60% {cursor: url(./assets/img/cursor/1/butterfly7.png), auto;}
+    } 
+
+    @keyframes cursor {
+        0% {cursor: url(./assets/img/cursor/1/butterfly1.png), auto;}
+        10% {cursor: url(./assets/img/cursor/1/butterfly2.png), auto;}
+        20% {cursor: url(./assets/img/cursor/1/butterfly3.png), auto;}
+        30% {cursor: url(./assets/img/cursor/1/butterfly4.png), auto;}
+        40% {cursor: url(./assets/img/cursor/1/butterfly5.png), auto;}
+        50% {cursor: url(./assets/img/cursor/1/butterfly6.png), auto;}
+        60% {cursor: url(./assets/img/cursor/1/butterfly7.png), auto;}
+    }
+
     .box.flex {
         display: flex;
         justify-content: center;
@@ -78,8 +98,11 @@
         -moz-animation: fadeIn linear 4s;
         -o-animation: fadeIn linear 4s;
         -ms-animation: fadeIn linear 4s;
-        cursor: pointer;
         margin: 0 20px;
+    }
+    
+    .links:hover{
+        box-shadow: 0 0 25px rgb(47, 78, 255); 
     }
 
     h1 {
@@ -115,7 +138,6 @@
         -moz-animation: fadeIn linear 2s;
         -o-animation: fadeIn linear 2s;
         -ms-animation: fadeIn linear 2s;
-        cursor: pointer;
         transform: translate(-50%, -50%)
     }
 
@@ -159,13 +181,19 @@
 
     .emoji{
         vertical-align: middle;
-        cursor: pointer; 
+    }
+    
+    .emoji:hover{
+        filter: blur(2px);
     }
 
     .footer-name {
         text-shadow: 1px 1px 2px black, 0 0 5px rgb(160, 98, 211), 0 0 3px rgb(128, 91, 123);
         color:rgb(204, 107, 191);
         text-decoration: none;
+        cursor: url(./assets/img/cursor/1/butterfly1.png), auto;
+        -webkit-animation: cursor 1500ms infinite;
+        animation: cursor 1500ms infinite;
     }
 
     .footer-name:hover {
@@ -174,6 +202,9 @@
 
     body {
         background:url('./assets/gif/landscape.gif') repeat-y 100% 100% fixed;
+        cursor: url(./assets/img/cursor/1/butterfly1.png), auto;
+        -webkit-animation: cursor 1500ms infinite;
+        animation: cursor 1500ms infinite;
     }
     body::-webkit-scrollbar {
         display: none;
