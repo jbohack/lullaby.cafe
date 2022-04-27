@@ -48,6 +48,40 @@
     60% {cursor: url(../img/cursor/1/butterfly7.png), auto;}
 }
 
+@media (hover: hover) {
+    .links:hover{
+        filter: drop-shadow(0 0 10px rgb(20, 33, 206));
+    }
+
+    h2:hover {
+        text-decoration: underline;
+    }
+
+    .footer-name:hover {
+        text-decoration: underline;
+    }
+
+    .emoji:hover{
+        filter: blur(2px);
+    }
+}
+
+.links:active {
+    filter: drop-shadow(0 0 10px rgb(20, 33, 206));
+}
+
+h2:active {
+    text-decoration: underline;
+}
+
+.footer-name:active {
+    text-decoration: underline;
+}
+
+.emoji:active {
+    filter: blur(2px);
+}
+
 .box.flex {
     display: flex;
     justify-content: center;
@@ -77,10 +111,6 @@
     image-rendering: pixelated;
 }
 
-.links:hover{
-    filter: drop-shadow(0 0 10px rgb(20, 33, 206));
-}
-
 h1 {
     text-shadow: 1px 1px 2px black, 0 0 10px rgb(22, 22, 231), 0 0 3px rgb(7, 7, 170);
     font-size: 45px;
@@ -90,6 +120,7 @@ h1 {
     left: 50%;
     margin-right: -50%;
     user-select: none;
+    -webkit-user-select: none;
     font-family: tooCuteFont;
     animation: fadeIn linear 2s;
     -webkit-animation: fadeIn linear 2s;
@@ -108,6 +139,7 @@ h2 {
     left: 50%;
     margin-right: -50%;
     user-select: none;
+    -webkit-user-select: none;
     font-family: tooCuteFont;
     animation: fadeIn linear 2s;
     -webkit-animation: fadeIn linear 2s;
@@ -115,10 +147,6 @@ h2 {
     -o-animation: fadeIn linear 2s;
     -ms-animation: fadeIn linear 2s;
     transform: translate(-50%, -50%)
-}
-
-h2:hover {
-    text-decoration: underline;
 }
 
 .footer-text {
@@ -129,6 +157,7 @@ h2:hover {
     width: 100%;
     text-align: center;
     user-select: none;
+    -webkit-user-select: none;
     font-family: tooCuteFont;
     animation: fadeIn linear 6s;
     -webkit-animation: fadeIn linear 6s;
@@ -146,6 +175,7 @@ h2:hover {
     width: 100%;
     text-align: center;
     user-select: none;
+    -webkit-user-select: none;
     font-family: tooCuteFont;
     animation: fadeIn linear 3s;
     -webkit-animation: fadeIn linear 3s;
@@ -160,10 +190,6 @@ h2:hover {
     vertical-align: middle;
 }
 
-.emoji:hover{
-    filter: blur(2px);
-}
-
 .footer-name {
     text-shadow: 1px 1px 2px black, 0 0 5px rgb(160, 98, 211), 0 0 3px rgb(128, 91, 123);
     color:rgb(204, 107, 191);
@@ -171,10 +197,6 @@ h2:hover {
     cursor: url(../img/cursor/1/butterfly1.png), auto;
     -webkit-animation: cursor 1500ms infinite;
     animation: cursor 1500ms infinite;
-}
-
-.footer-name:hover {
-    text-decoration: underline;
 }
 
 body {
