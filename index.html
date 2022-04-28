@@ -120,6 +120,12 @@
         playingMusic = !playingMusic;
     };
 
+    player.addEventListener('ended', (event) => {
+        console.log('Music Player: Song ended');
+        playingMusic = false;
+        playAudio();
+    });
+    
 // open links onclick
     function openGitHub() {
         window.open("https://github.com/jbohack", "_blank");
