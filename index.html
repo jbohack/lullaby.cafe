@@ -115,7 +115,7 @@
         } else {
             i = ++i < audioSources.length ? i : 0;
             player.src = audioSources[i];
-            console.log("Music Player: Playing --> " + audioSources[i]);
+            console.log("Music Player: Playing --> " + audioSources[i].slice(15));
         }
         playingMusic = !playingMusic;
     };
@@ -125,7 +125,7 @@
         playingMusic = false;
         playAudio();
     });
-    
+
 // open links onclick
     function openGitHub() {
         window.open("https://github.com/jbohack", "_blank");
