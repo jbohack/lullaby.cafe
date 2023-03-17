@@ -200,7 +200,15 @@ h2 {
 }
 
 body {
-    background:url('../gif/landscape.gif') repeat-y 100% 100% fixed;
+    background: url('../gif/landscape.gif') repeat-y 100% 100% fixed;
+}
+@media screen and (min-width: 3840px) {
+   body {
+       background: url('../gif/landscape-4k.gif') repeat-y 100% 100% fixed;
+   }
+}
+
+body {
     cursor: url(../img/cursor/1/butterfly1.png), auto;
     -webkit-animation: cursor 1500ms infinite;
     animation: cursor 1500ms infinite;
