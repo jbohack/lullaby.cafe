@@ -201,10 +201,20 @@ h2 {
 
 body {
     background: url('../gif/landscape.gif') repeat-y 100% 100% fixed;
+    background-size: cover;
 }
+
+@media screen and (min-width: 2560px) and (max-width: 3839px) {
+   body {
+       background: url('../gif/landscape-2k.gif') repeat-y 100% 100% fixed;
+       background-size: cover;
+   }
+}
+
 @media screen and (min-width: 3840px) {
    body {
        background: url('../gif/landscape-4k.gif') repeat-y 100% 100% fixed;
+       background-size: cover;
    }
 }
 
