@@ -9,103 +9,120 @@
     <link rel="icon" type="image/png" href="./assets/img/favicon-img.png" sizes="32x32">
     <link rel="stylesheet" href="./assets/css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="lullaby.cafe">
+    <meta property="og:description" content="A deep dreamy atmosphere by jbohack">
+    <meta property="og:image" content="https://lullaby.cafe/assets/gif/nyan.gif">
+    <meta property="og:image:type" content="image/gif">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="198">
+    <meta property="og:url" content="https://lullaby.cafe">
+    <meta property="og:type" content="website">
+
 </head>
 
 <body>
     <h1 style="color:rgb(83, 83, 207);">lullaby.cafe</h1>
-    <h2 style="color:rgb(83, 83, 207);" onClick="playAudio()" id="hiddenMusic" >a deep dreamy atmosphere...
-        <audio id = "music" autoplay></audio>
+    <h2 style="color:rgb(83, 83, 207);" onClick="playAudio()" id="hiddenMusic">a deep dreamy atmosphere...
+        <audio id="music" autoplay></audio>
     </h2>
-    
+
     <div class="box flex">
-            <img src="./assets/img/github.png" class="links" width="56" height="56" onClick="openGitHub()">
-            <img src="./assets/img/discord.png" class="links" width="56" height="56" onClick="openDiscord()">
-<!--        <img src="./assets/img/realmeye.png" class="links" width="56" height="56" onClick="openRealmEye()"> -->
-            <img src="./assets/img/coffee.png" class="links" width="56" height="56" onClick="openCoffeeTip()">
+        <img src="./assets/img/github.png" class="links" width="56" height="56" onClick="openGitHub()">
+        <img src="./assets/img/discord.png" class="links" width="56" height="56" onClick="openDiscord()">
+        <!-- <img src="./assets/img/realmeye.png" class="links" width="56" height="56" onClick="openRealmEye()"> -->
+        <img src="./assets/img/coffee.png" class="links" width="56" height="56" onClick="openCoffeeTip()">
     </div>
-    <p class="footer-text"> made with <img class="emoji" id="heart" alt="heart" height="20" width="20" onclick="secretCounter()"></g-emoji> by <a class="footer-name" target="_blank" rel="noopener noreferrer" href="https://discordapp.com/users/184471481026084864/">jbohack</a></p>
+
+    <div class="project-section">
+        <p class="project-text">currently dreaming up <span class="project-highlight"
+                onClick="openCurrentProject()">nyanBOX</span> ✨</p>
+    </div>
+    <p class="footer-text"> made with <img class="emoji" id="heart" alt="heart" height="20" width="20"
+            onclick="secretCounter()"></g-emoji> by <a class="footer-name" target="_blank" rel="noopener noreferrer"
+            href="https://discordapp.com/users/184471481026084864/">jbohack</a></p>
     <div id="secret"></div>
 </body>
 
 <script>
-// secret music
+    // secret music
     const player = document.getElementById("music");
     i = 0;
     player.pause();
     var playingMusic = false;
 
     const audioSources = [
-    "./assets/sound/bubblegum-lofi.mp3", 
-    "./assets/sound/lofi_lounge.mp3", 
-    "./assets/sound/break_free.mp3", 
-    "./assets/sound/soft_ambient.mp3", 
-    "./assets/sound/funky_lofi.mp3",
-    "./assets/sound/lofi_fashion_3.mp3", 
-    "./assets/sound/the_higher_self.mp3", 
-    "./assets/sound/lofi_fashion_2.mp3", 
-    "./assets/sound/sway.mp3", 
-    "./assets/sound/nostalgic.mp3",
-    "./assets/sound/november_rain.mp3", 
-    "./assets/sound/song_of_the_free.mp3", 
-    "./assets/sound/waves.mp3", 
-    "./assets/sound/calm.mp3", 
-    "./assets/sound/put_some_work_in.mp3",
-    "./assets/sound/life_is_fine.mp3", 
-    "./assets/sound/smile_on_me.mp3", 
-    "./assets/sound/august_rain.mp3", 
-    "./assets/sound/lofi_hiphop_3.mp3", 
-    "./assets/sound/lift_me_up.mp3",
-    "./assets/sound/lofi_sax.mp3", 
-    "./assets/sound/lofi_hiphop_2.mp3", 
-    "./assets/sound/mediterranean_sea.mp3", 
-    "./assets/sound/loneliness.mp3", 
-    "./assets/sound/lofi_fashion.mp3",
-    "./assets/sound/september_rain.mp3", 
-    "./assets/sound/drifting_away.mp3", 
-    "./assets/sound/hiking_travel.mp3",
-    "./assets/sound/laxin.mp3", 
-    "./assets/sound/chillhop.mp3", 
-    "./assets/sound/brand_new_days.mp3",
-    "./assets/sound/tropical.mp3", 
-    "./assets/sound/oneday.mp3", 
-    "./assets/sound/dilemma.mp3",
-    "./assets/sound/sleep_calm.mp3", 
-    "./assets/sound/sparkle.mp3", 
-    "./assets/sound/vlog_hip_hop.mp3", 
-    "./assets/sound/lofi_hiphop2.mp3", 
-    "./assets/sound/gentle_lofi.mp3",
-    "./assets/sound/midnight.mp3", 
-    "./assets/sound/what_funk.mp3", 
-    "./assets/sound/i_need_you.mp3", 
-    "./assets/sound/land_of_fire.mp3", 
-    "./assets/sound/grateful.mp3",
-    "./assets/sound/sunkv.mp3", 
-    "./assets/sound/rainbow.mp3", 
-    "./assets/sound/vlog_music.mp3", 
-    "./assets/sound/rondo.mp3", 
-    "./assets/sound/tokyo_chillbeats.mp3",
-    "./assets/sound/sky_drops.mp3", 
-    "./assets/sound/lofi_hiphop.mp3", 
-    "./assets/sound/saturday_nights.mp3", 
-    "./assets/sound/the_lofi_elk.mp3", 
-    "./assets/sound/soft_lofi.mp3",
-    "./assets/sound/instant.mp3", 
-    "./assets/sound/lofi_relax.mp3", 
-    "./assets/sound/a_just_king.mp3", 
-    "./assets/sound/deepsea.mp3"
+        "./assets/sound/bubblegum-lofi.mp3",
+        "./assets/sound/lofi_lounge.mp3",
+        "./assets/sound/break_free.mp3",
+        "./assets/sound/soft_ambient.mp3",
+        "./assets/sound/funky_lofi.mp3",
+        "./assets/sound/lofi_fashion_3.mp3",
+        "./assets/sound/the_higher_self.mp3",
+        "./assets/sound/lofi_fashion_2.mp3",
+        "./assets/sound/sway.mp3",
+        "./assets/sound/nostalgic.mp3",
+        "./assets/sound/november_rain.mp3",
+        "./assets/sound/song_of_the_free.mp3",
+        "./assets/sound/waves.mp3",
+        "./assets/sound/calm.mp3",
+        "./assets/sound/put_some_work_in.mp3",
+        "./assets/sound/life_is_fine.mp3",
+        "./assets/sound/smile_on_me.mp3",
+        "./assets/sound/august_rain.mp3",
+        "./assets/sound/lofi_hiphop_3.mp3",
+        "./assets/sound/lift_me_up.mp3",
+        "./assets/sound/lofi_sax.mp3",
+        "./assets/sound/lofi_hiphop_2.mp3",
+        "./assets/sound/mediterranean_sea.mp3",
+        "./assets/sound/loneliness.mp3",
+        "./assets/sound/lofi_fashion.mp3",
+        "./assets/sound/september_rain.mp3",
+        "./assets/sound/drifting_away.mp3",
+        "./assets/sound/hiking_travel.mp3",
+        "./assets/sound/laxin.mp3",
+        "./assets/sound/chillhop.mp3",
+        "./assets/sound/brand_new_days.mp3",
+        "./assets/sound/tropical.mp3",
+        "./assets/sound/oneday.mp3",
+        "./assets/sound/dilemma.mp3",
+        "./assets/sound/sleep_calm.mp3",
+        "./assets/sound/sparkle.mp3",
+        "./assets/sound/vlog_hip_hop.mp3",
+        "./assets/sound/lofi_hiphop2.mp3",
+        "./assets/sound/gentle_lofi.mp3",
+        "./assets/sound/midnight.mp3",
+        "./assets/sound/what_funk.mp3",
+        "./assets/sound/i_need_you.mp3",
+        "./assets/sound/land_of_fire.mp3",
+        "./assets/sound/grateful.mp3",
+        "./assets/sound/sunkv.mp3",
+        "./assets/sound/rainbow.mp3",
+        "./assets/sound/vlog_music.mp3",
+        "./assets/sound/rondo.mp3",
+        "./assets/sound/tokyo_chillbeats.mp3",
+        "./assets/sound/sky_drops.mp3",
+        "./assets/sound/lofi_hiphop.mp3",
+        "./assets/sound/saturday_nights.mp3",
+        "./assets/sound/the_lofi_elk.mp3",
+        "./assets/sound/soft_lofi.mp3",
+        "./assets/sound/instant.mp3",
+        "./assets/sound/lofi_relax.mp3",
+        "./assets/sound/a_just_king.mp3",
+        "./assets/sound/deepsea.mp3"
     ];
 
     function shuffleSongs(array) {
-    let audioSources = array.length, randomAudio;
+        let audioSources = array.length, randomAudio;
 
-    while (randomAudio != 0) {
-        randomAudio = Math.floor(Math.random() * audioSources);
-        audioSources--;
-        [array[audioSources], array[randomAudio]] = [
-        array[randomAudio], array[audioSources]];
-    }
+        while (randomAudio != 0) {
+            randomAudio = Math.floor(Math.random() * audioSources);
+            audioSources--;
+            [array[audioSources], array[randomAudio]] = [
+                array[randomAudio], array[audioSources]];
+        }
 
-    return array;
+        return array;
     }
     shuffleSongs(audioSources);
 
@@ -127,7 +144,7 @@
         playAudio();
     });
 
-// open links onclick
+    // open links onclick
     function openGitHub() {
         window.open("https://github.com/jbohack", "_blank");
     }
@@ -140,19 +157,22 @@
     function openCoffeeTip() {
         window.open("https://ko-fi.com/jbohack", "_blank");
     }
+    function openCurrentProject() {
+        window.open("https://nyanBOX.lullaby.cafe", "_blank");
+    }
 
-// rin credits secret
+    // rin credits secret
     var secretNumber = 0
 
     function secretCounter() {
         secretNumber = secretNumber + 1
         if (secretNumber === 5) {
-            document.getElementById("secret").innerHTML += 
-              "<p class=secret-text>icons and cursor made by <a class=footer-name target=_blank rel=noopener noreferrer href=https://discordapp.com/users/432599055949103106/>RIN#7777</a><p>";
+            document.getElementById("secret").innerHTML +=
+                "<p class=secret-text>icons and cursor made by <a class=footer-name target=_blank rel=noopener noreferrer href=https://discordapp.com/users/432599055949103106/>RIN#7777</a><p>";
         }
     }
 
-// random heart picker
+    // random heart picker
     var imageArray = new Array("./assets/img/heart-red.png", "./assets/img/heart-pink.png", "./assets/img/heart-blue.png");
     var numberRandom = Math.floor(Math.random() * imageArray.length);
     document.getElementById("heart").src = imageArray[numberRandom];   

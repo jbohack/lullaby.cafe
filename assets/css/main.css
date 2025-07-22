@@ -4,52 +4,117 @@
 }
 
 @keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-}   
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 @-moz-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @-webkit-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-}   
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 @-o-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @-ms-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @-webkit-keyframes cursor {
-    0% {cursor: url(../img/cursor/1/butterfly1.png), auto;}
-    10% {cursor: url(../img/cursor/1/butterfly2.png), auto;}
-    20% {cursor: url(../img/cursor/1/butterfly3.png), auto;}
-    30% {cursor: url(../img/cursor/1/butterfly4.png), auto;}
-    40% {cursor: url(../img/cursor/1/butterfly5.png), auto;}
-    50% {cursor: url(../img/cursor/1/butterfly6.png), auto;}
-    60% {cursor: url(../img/cursor/1/butterfly7.png), auto;}
-} 
+    0% {
+        cursor: url(../img/cursor/1/butterfly1.png), auto;
+    }
+
+    10% {
+        cursor: url(../img/cursor/1/butterfly2.png), auto;
+    }
+
+    20% {
+        cursor: url(../img/cursor/1/butterfly3.png), auto;
+    }
+
+    30% {
+        cursor: url(../img/cursor/1/butterfly4.png), auto;
+    }
+
+    40% {
+        cursor: url(../img/cursor/1/butterfly5.png), auto;
+    }
+
+    50% {
+        cursor: url(../img/cursor/1/butterfly6.png), auto;
+    }
+
+    60% {
+        cursor: url(../img/cursor/1/butterfly7.png), auto;
+    }
+}
 
 @keyframes cursor {
-    0% {cursor: url(../img/cursor/1/butterfly1.png), auto;}
-    10% {cursor: url(../img/cursor/1/butterfly2.png), auto;}
-    20% {cursor: url(../img/cursor/1/butterfly3.png), auto;}
-    30% {cursor: url(../img/cursor/1/butterfly4.png), auto;}
-    40% {cursor: url(../img/cursor/1/butterfly5.png), auto;}
-    50% {cursor: url(../img/cursor/1/butterfly6.png), auto;}
-    60% {cursor: url(../img/cursor/1/butterfly7.png), auto;}
+    0% {
+        cursor: url(../img/cursor/1/butterfly1.png), auto;
+    }
+
+    10% {
+        cursor: url(../img/cursor/1/butterfly2.png), auto;
+    }
+
+    20% {
+        cursor: url(../img/cursor/1/butterfly3.png), auto;
+    }
+
+    30% {
+        cursor: url(../img/cursor/1/butterfly4.png), auto;
+    }
+
+    40% {
+        cursor: url(../img/cursor/1/butterfly5.png), auto;
+    }
+
+    50% {
+        cursor: url(../img/cursor/1/butterfly6.png), auto;
+    }
+
+    60% {
+        cursor: url(../img/cursor/1/butterfly7.png), auto;
+    }
 }
 
 @media (hover: hover) {
-    .links:hover{
+    .links:hover {
         filter: drop-shadow(0 0 10px rgb(20, 33, 206));
     }
 
@@ -61,7 +126,7 @@
         text-decoration: underline;
     }
 
-    .emoji:hover{
+    .emoji:hover {
         filter: blur(2px);
     }
 }
@@ -150,7 +215,7 @@ h2 {
 }
 
 .footer-text {
-    color:rgb(204, 107, 191);
+    color: rgb(204, 107, 191);
     position: fixed;
     left: 50%;
     bottom: 0;
@@ -164,11 +229,11 @@ h2 {
     -moz-animation: fadeIn linear 6s;
     -o-animation: fadeIn linear 6s;
     -ms-animation: fadeIn linear 6s;
-    transform: translate(-50%, -50%) 
+    transform: translate(-50%, -50%)
 }
 
 .secret-text {
-    color:rgb(204, 107, 191);
+    color: rgb(204, 107, 191);
     position: fixed;
     left: 50%;
     bottom: -20px;
@@ -182,17 +247,17 @@ h2 {
     -moz-animation: fadeIn linear 3s;
     -o-animation: fadeIn linear 3s;
     -ms-animation: fadeIn linear 3s;
-    transform: translate(-50%, -50%) 
+    transform: translate(-50%, -50%)
 }
 
-.emoji{
+.emoji {
     image-rendering: pixelated;
     vertical-align: middle;
 }
 
 .footer-name {
     text-shadow: 1px 1px 2px black, 0 0 5px rgb(160, 98, 211), 0 0 3px rgb(128, 91, 123);
-    color:rgb(204, 107, 191);
+    color: rgb(204, 107, 191);
     text-decoration: none;
     cursor: url(../img/cursor/1/butterfly1.png), auto;
     -webkit-animation: cursor 1500ms infinite;
@@ -205,17 +270,17 @@ body {
 }
 
 @media screen and (min-width: 2560px) and (max-width: 3839px) {
-   body {
-       background: url('../gif/landscape-2k.gif') repeat-y 100% 100% fixed;
-       background-size: cover;
-   }
+    body {
+        background: url('../gif/landscape-2k.gif') repeat-y 100% 100% fixed;
+        background-size: cover;
+    }
 }
 
 @media screen and (min-width: 3840px) {
-   body {
-       background: url('../gif/landscape-4k.gif') repeat-y 100% 100% fixed;
-       background-size: cover;
-   }
+    body {
+        background: url('../gif/landscape-4k.gif') repeat-y 100% 100% fixed;
+        background-size: cover;
+    }
 }
 
 body {
@@ -223,10 +288,84 @@ body {
     -webkit-animation: cursor 1500ms infinite;
     animation: cursor 1500ms infinite;
 }
+
 body::-webkit-scrollbar {
     display: none;
 }
 
 html {
     scrollbar-width: none;
+}
+
+.project-section {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: fadeIn linear 6s;
+    -webkit-animation: fadeIn linear 6s;
+    -moz-animation: fadeIn linear 6s;
+    -o-animation: fadeIn linear 6s;
+    -ms-animation: fadeIn linear 6s;
+}
+
+/* Tablet and large mobile */
+@media (max-height: 768px) {
+    .project-section {
+        top: 68%;
+    }
+}
+
+/* iPhone 12 Pro and similar */
+@media (max-height: 844px) and (min-height: 700px) {
+    .project-section {
+        top: 65%;
+    }
+}
+
+/* iPhone 6/7/8 Plus landscape & similar */
+@media (max-height: 414px) {
+    .project-section {
+        top: 76%;
+    }
+}
+
+/* iPhone SE / smaller phones */
+@media (max-height: 375px) {
+    .project-section {
+        top: 81%;
+    }
+}
+
+
+.project-text {
+    color: rgb(83, 83, 207);
+    font-family: tooCuteFont;
+    font-size: 19px;
+    text-shadow: 1px 1px 2px black, 0 0 10px rgb(22, 22, 231), 0 0 5px rgb(7, 7, 170);
+    user-select: none;
+    -webkit-user-select: none;
+    margin: 0;
+}
+
+.project-highlight {
+    color: rgb(204, 107, 191);
+    text-shadow: 1px 1px 2px black, 0 0 8px rgb(160, 98, 211), 0 0 3px rgb(128, 91, 123);
+    cursor: url(../img/cursor/1/butterfly1.png), auto;
+    -webkit-animation: cursor 1500ms infinite;
+    animation: cursor 1500ms infinite;
+    transition: all 0.3s ease;
+}
+
+@media (hover: hover) {
+    .project-highlight:hover {
+        text-decoration: underline;
+        filter: drop-shadow(0 0 8px rgb(204, 107, 191));
+    }
+}
+
+.project-highlight:active {
+    text-decoration: underline;
+    filter: drop-shadow(0 0 8px rgb(204, 107, 191));
 }
