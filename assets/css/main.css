@@ -147,23 +147,34 @@ h2:active {
     filter: blur(2px);
 }
 
-.box.flex {
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: clamp(1rem, 2vh, 1.5rem);
+}
+
+.title-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(0.5rem, 1vh, 0.8rem);
+}
+
+.links-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 110vh;
-}
-
-.box {
-    padding: .5rem;
-    border-radius: 4px;
-}
-
-.box p {
-    max-width: 125px;
-    text-align: center;
-    margin: .25rem;
-    padding: .25rem;
+    gap: 20px;
 }
 
 .links {
@@ -172,18 +183,15 @@ h2:active {
     -moz-animation: fadeIn linear 4s;
     -o-animation: fadeIn linear 4s;
     -ms-animation: fadeIn linear 4s;
-    margin: 0 20px;
     image-rendering: pixelated;
+    width: clamp(40px, 6vw, 56px);
+    height: clamp(40px, 6vw, 56px);
 }
 
 h1 {
     text-shadow: 1px 1px 2px black, 0 0 10px rgb(22, 22, 231), 0 0 3px rgb(7, 7, 170);
-    font-size: 45px;
+    font-size: clamp(28px, 6vw, 45px);
     margin: 0;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    margin-right: -50%;
     user-select: none;
     -webkit-user-select: none;
     font-family: tooCuteFont;
@@ -192,17 +200,12 @@ h1 {
     -moz-animation: fadeIn linear 2s;
     -o-animation: fadeIn linear 2s;
     -ms-animation: fadeIn linear 2s;
-    transform: translate(-50%, -50%)
 }
 
 h2 {
     text-shadow: 1px 1px 2px black, 0 0 5px rgb(22, 22, 231), 0 0 3px rgb(7, 7, 170);
-    font-size: 25px;
+    font-size: clamp(16px, 3.5vw, 25px);
     margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
     user-select: none;
     -webkit-user-select: none;
     font-family: tooCuteFont;
@@ -211,48 +214,50 @@ h2 {
     -moz-animation: fadeIn linear 2s;
     -o-animation: fadeIn linear 2s;
     -ms-animation: fadeIn linear 2s;
-    transform: translate(-50%, -50%)
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0.5rem;
 }
 
 .footer-text {
     color: rgb(204, 107, 191);
-    position: fixed;
-    left: 50%;
-    bottom: 0;
-    width: 100%;
     text-align: center;
     user-select: none;
     -webkit-user-select: none;
     font-family: tooCuteFont;
+    font-size: clamp(10px, 2vw, 16px);
     animation: fadeIn linear 6s;
     -webkit-animation: fadeIn linear 6s;
     -moz-animation: fadeIn linear 6s;
     -o-animation: fadeIn linear 6s;
     -ms-animation: fadeIn linear 6s;
-    transform: translate(-50%, -50%)
+    margin: 0;
 }
 
 .secret-text {
     color: rgb(204, 107, 191);
-    position: fixed;
-    left: 50%;
-    bottom: -20px;
-    width: 100%;
     text-align: center;
     user-select: none;
     -webkit-user-select: none;
     font-family: tooCuteFont;
+    font-size: clamp(9px, 1.8vw, 14px);
     animation: fadeIn linear 3s;
     -webkit-animation: fadeIn linear 3s;
     -moz-animation: fadeIn linear 3s;
     -o-animation: fadeIn linear 3s;
     -ms-animation: fadeIn linear 3s;
-    transform: translate(-50%, -50%)
+    margin: 0;
 }
 
 .emoji {
     image-rendering: pixelated;
     vertical-align: middle;
+    width: clamp(16px, 2vw, 20px);
+    height: clamp(16px, 2vw, 20px);
 }
 
 .footer-name {
@@ -298,10 +303,8 @@ html {
 }
 
 .project-section {
-    position: absolute;
-    top: 63%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
     text-align: center;
     animation: fadeIn linear 6s;
     -webkit-animation: fadeIn linear 6s;
@@ -310,39 +313,10 @@ html {
     -ms-animation: fadeIn linear 6s;
 }
 
-/* Tablet and large mobile */
-@media (max-height: 768px) {
-    .project-section {
-        top: 68%;
-    }
-}
-
-/* iPhone 12 Pro and similar */
-@media (max-height: 844px) and (min-height: 700px) {
-    .project-section {
-        top: 65%;
-    }
-}
-
-/* iPhone 6/7/8 Plus landscape & similar */
-@media (max-height: 414px) {
-    .project-section {
-        top: 76%;
-    }
-}
-
-/* iPhone SE / smaller phones */
-@media (max-height: 375px) {
-    .project-section {
-        top: 81%;
-    }
-}
-
-
 .project-text {
     color: rgb(83, 83, 207);
     font-family: tooCuteFont;
-    font-size: 19px;
+    font-size: clamp(14px, 2.5vw, 19px);
     text-shadow: 1px 1px 2px black, 0 0 10px rgb(22, 22, 231), 0 0 5px rgb(7, 7, 170);
     user-select: none;
     -webkit-user-select: none;
