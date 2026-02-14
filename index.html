@@ -1,23 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>lullaby.cafe</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FS6ZRMMFRQ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FS6ZRMMFRQ');
+    </script>
+    <title>jbohack | lullaby.cafe</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Hi there! lullaby.cafe is a personal project developed by jbohack">
-    <meta name="keywords" content="lullaby cafe, lullaby.cafe, a deep dreamy atmosphere, jbohack">
+    <meta name="description" content="jbohack — security engineer by day, co-founder of Nyan Devices by night. breaking and defending things in between.">
+    <meta name="keywords" content="jbohack, cyber security engineer, blue team, red team, nyan devices, programmer, lullaby.cafe">
     <meta name="author" content="jbohack">
     <link rel="icon" type="image/png" href="./assets/img/favicon-img.png" sizes="32x32">
     <link rel="stylesheet" href="./assets/css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta property="og:title" content="lullaby.cafe">
-    <meta property="og:description" content="A deep dreamy atmosphere by jbohack">
+    <meta property="og:title" content="jbohack | lullaby.cafe">
+    <meta property="og:description" content="security engineer by day, co-founder of Nyan Devices by night. breaking and defending things in between.">
     <meta property="og:image" content="https://lullaby.cafe/assets/gif/nyan.gif">
     <meta property="og:image:type" content="image/gif">
     <meta property="og:image:width" content="500">
     <meta property="og:image:height" content="198">
     <meta property="og:url" content="https://lullaby.cafe">
     <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="jbohack | lullaby.cafe">
+    <meta name="twitter:description" content="security engineer by day, co-founder of Nyan Devices by night. breaking and defending things in between.">
+    <meta name="twitter:image" content="https://lullaby.cafe/assets/gif/nyan.gif">
+
+    <link rel="canonical" href="https://lullaby.cafe">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "ProfilePage",
+                "name": "jbohack",
+                "url": "https://lullaby.cafe",
+                "mainEntity": {
+                    "@id": "https://lullaby.cafe/#jbohack"
+                }
+            },
+            {
+                "@type": "WebSite",
+                "name": "lullaby.cafe",
+                "url": "https://lullaby.cafe",
+                "description": "jbohack — security engineer by day, co-founder of Nyan Devices by night. breaking and defending things in between.",
+                "author": {
+                    "@id": "https://lullaby.cafe/#jbohack"
+                }
+            },
+            {
+                "@type": "Person",
+                "@id": "https://lullaby.cafe/#jbohack",
+                "name": "jbohack",
+                "url": "https://lullaby.cafe",
+                "jobTitle": "Cyber Security Engineer",
+                "knowsAbout": ["Cyber Security", "Blue Team", "Red Team", "Software Development"],
+                "affiliation": {
+                    "@type": "Organization",
+                    "name": "Nyan Devices",
+                    "url": "https://nyandevices.com",
+                    "founder": {
+                        "@id": "https://lullaby.cafe/#jbohack"
+                    }
+                },
+                "sameAs": [
+                    "https://github.com/jbohack",
+                    "https://ko-fi.com/jbohack",
+                    "https://discord.com/users/184471481026084864/"
+                ]
+            }
+        ]
+    }
+    </script>
 
 </head>
 
@@ -32,10 +94,10 @@
             </div>
 
             <div class="links-section">
-                <img src="./assets/img/github.png" class="links" onClick="openGitHub()">
-                <img src="./assets/img/discord.png" class="links" onClick="openDiscord()">
+                <img src="./assets/img/github.png" class="links" onClick="openGitHub()" alt="GitHub">
+                <img src="./assets/img/discord.png" class="links" onClick="openDiscord()" alt="Discord">
                 <!-- <img src="./assets/img/realmeye.png" class="links" onClick="openRealmEye()"> -->
-                <img src="./assets/img/coffee.png" class="links" onClick="openCoffeeTip()">
+                <img src="./assets/img/coffee.png" class="links" onClick="openCoffeeTip()" alt="Ko-fi">
             </div>
 
             <div class="project-section">
@@ -45,13 +107,12 @@
         </div>
 
         <footer class="footer-section">
-            <p class="footer-text"> made with <img class="emoji" id="heart" alt="heart"
-                    onclick="secretCounter()"></g-emoji> by <a class="footer-name" target="_blank"
+            <p class="footer-text"> made with <img class="emoji" id="heart" alt="heart" src="./assets/img/heart-red.png"
+                    onclick="secretCounter()"> by <a class="footer-name" target="_blank"
                     rel="noopener noreferrer" href="https://discordapp.com/users/184471481026084864/">jbohack</a></p>
             <div id="secret"></div>
         </footer>
     </div>
-</body>
 
 <script>
     // secret music
@@ -177,13 +238,14 @@
         secretNumber = secretNumber + 1
         if (secretNumber === 5) {
             document.getElementById("secret").innerHTML +=
-                "<p class=secret-text>icons and cursor made by <a class=footer-name target=_blank rel=noopener noreferrer href=https://discordapp.com/users/432599055949103106/>RIN#7777</a><p>";
+                "<p class=secret-text>icons and cursor made by <a class=footer-name target=_blank rel=noopener noreferrer href=https://discordapp.com/users/432599055949103106/>RIN#7777</a></p>";
         }
     }
 
     // random heart picker
     var imageArray = new Array("./assets/img/heart-red.png", "./assets/img/heart-pink.png", "./assets/img/heart-blue.png");
     var numberRandom = Math.floor(Math.random() * imageArray.length);
-    document.getElementById("heart").src = imageArray[numberRandom];   
+    document.getElementById("heart").src = imageArray[numberRandom];
 </script>
+</body>
 </html>
